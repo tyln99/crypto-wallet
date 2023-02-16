@@ -1,0 +1,30 @@
+.zForm-button {
+    width: calc(50% - 3px);
+    height: 38px;
+    border-radius: 19px;
+    color: white;
+
+    &.primary {
+        background-color: var(--color-zwallet);
+    }
+
+    &.secondary {
+        background-color: var(--grey400);
+    }
+
+    &.outline-primary {
+        border: 1px solid var(--color-zwallet);
+        color: var(--color-zwallet);
+    }
+
+    &.outline-secondary {
+        border: 1px solid var(--grey400);
+        color: var(--grey400);
+    }
+
+    &:disabled {
+        background-color: var(--grey400);
+        border: unset;
+        color: white;
+    }
+}

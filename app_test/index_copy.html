@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test App</title>
+</head>
+<style>
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div>
+        <h1>Test App Webpage ZWallet</h1>
+        <div style="display: flex; align-items: center;">
+
+            <p>
+                <span>
+                    <strong>- Method:</strong>
+                    <select id="method">
+                        <option value="wallet_sign">wallet_sign</option>
+                        <option value="wallet_requestAccounts">wallet_requestAccounts</option>
+                        <option value="wallet_switchEthereumChain">wallet_switchEthereumChain</option>
+                        <option value="wallet_sendTransaction">wallet_sendTransaction</option>
+                        <option value="wallet_getBalance">wallet_getBalance</option>
+                        <option value="wallet_contract">wallet_contract</option>
+                    </select>
+                </span>
+            </p>
+            <button style="background-color: rgb(148, 148, 235); width: 100px; height: 40px; margin-left: 20px;"
+                onclick="onClickSubmit()">Submit</button>
+        </div>
+        <div style="background-color: lightgrey; padding: 10px; max-height: 300px; overflow: scroll;">
+            
+                <strong>-Reponse:</strong>
+                <p id="response"></p>
+
+        </div>
+
+        <p>
+            <span>
+                <strong>- Json Params:</strong><br>
+                <textarea rows="20" id="params" style="width: 90vw;"></textarea>
+            </span>
+        <div>
+            <span>
+                - Param Template</span>
+            <div style="height: 300px; width: 90vw; overflow: scroll; border: 1px solid grey;">
+                <strong>wallet_switchEthereumChain:</strong>
+                <pre>
+[{
+    "chainId":97 
+}]
+                </pre>
+                <br />
+                <strong>wallet_sendTransaction:</strong>
+                <pre>
+[{
+    "from": "0xc871A6abC90cebA7a626Eea46E0C2936f2Eb7293",
+    "to": "0x66aD13766007b509eeAD1E555dadC046DEC81dcb",
+    "gas": 30400,
+    "gasPrice": 10,
+    "value": 0.1,
+    "data": ""
+  }]
+                </pre>
+
+                <strong>wallet_getBalance:</strong>
+                <pre>
+["0xc871A6abC90cebA7a626Eea46E0C2936f2Eb7293"]
+                </pre>
+
+                <strong>wallet_contract:</strong>
+                <pre>
+{
+    "method": "mint",
+    "contract":"0x3529c96bEefC40AD6A6AdA8361b2D85717d9E0A4",
+    "params": [],
+    "value": 0.1,
+    "abi":[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint8","name":"version","type":"uint8"}],"name":"Initialized","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"userAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"userOpenBox","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"availableBoxes","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"domain","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getMyBoxes","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"string","name":"name_","type":"string"},{"internalType":"string","name":"symbol_","type":"string"},{"internalType":"uint256","name":"maxBox_","type":"uint256"},{"internalType":"uint256","name":"newBoxPrice_","type":"uint256"}],"name":"initialize","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxBox","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"mint","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"newBoxPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"openBox","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_maxBox","type":"uint256"}],"name":"setMaxBox","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newBoxPrice","type":"uint256"}],"name":"setNewBoxPrice","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"withdraw","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"payable","type":"function"}]
+}
+                </pre>
+                <br />
+            </div>
+        </div>
+        </p>
+        <p>
+            <strong>-----------------------------------------------------------------------------------------------</strong>
+
+        </p>
+        <p>
+            <span>
+                <strong>-Accounts Changed:</strong>
+                <p id="accountsChanged"></p>
+            </span>
+
+        </p>
+        <p>
+            <span>
+                <strong>-Chain Changed:</strong>
+                <p id="chainChanged"></p>
+            </span>
+        </p>
+        <p>
+            <span>
+                <strong>-Connected:</strong>
+                <p id="connected"></p>
+            </span>
+        </p>
+        <p>
+            <span>
+                <strong>-walletContractHandle:</strong>
+                <p id="walletContractHandle"></p>
+            </span>
+        </p>
+        <p>
+            <span>
+                <strong>-walletTransactionHandle:</strong>
+                <p id="walletTransactionHandle"></p>
+            </span>
+        </p>
+    </div>
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html> 

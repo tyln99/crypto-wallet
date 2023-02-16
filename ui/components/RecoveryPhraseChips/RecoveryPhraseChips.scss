@@ -1,0 +1,40 @@
+@use "~styles/breakpoints";
+
+.recovery-phrase-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+
+    .chip {
+        padding: 10px 10px 10px 0;
+        display: flex;
+        align-items: center;
+        flex: 25%;
+
+        .counter {
+            width: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1281px) {
+        .chip {
+            flex: 50%;
+        }
+    }
+
+    .show-and-hide-password-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            margin-right: 10px;
+        }
+
+        .button {
+            cursor: pointer;
+            width: 25px;
+        }
+    }
+}

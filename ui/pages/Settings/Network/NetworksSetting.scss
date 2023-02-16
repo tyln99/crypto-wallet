@@ -1,0 +1,61 @@
+.networks-setting-content {
+    .networks-setting-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .zForm-button {
+            width: 140px;
+        }
+    }
+
+    .add-network-form {
+        padding: 10px;
+        border: 1px solid var(--color-border-muted);
+        border-radius: 10px;
+        width: 360px;
+        max-width: 100%;
+    }
+
+    main {
+        border: 1px solid var(--color-border-muted);
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .networks-list {
+            width: 50%;
+            padding-right: 10px;
+
+            .network-item {
+                padding: 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .network-name {
+                    cursor: pointer;
+                }
+
+                &.active {
+                    background-color: var(--color-background-muted) !important;
+                    color: unset !important;
+                }
+            }
+        }
+
+        .network-info {
+            width: 50%;
+            padding-left: 10px;
+            border-left: 1px solid var(--color-border-muted);
+        }
+    }
+
+}

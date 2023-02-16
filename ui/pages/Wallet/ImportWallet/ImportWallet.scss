@@ -1,0 +1,23 @@
+.import-wallet-container {
+    padding-bottom: 20px;
+
+    main {
+        padding: 16px;
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 500px;
+
+            &.title__small {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                text-align: left;
+                color: var(--color-text-dark);
+            }
+        }
+
+        .description {
+            color: var(--color-text-light);
+        }
+    }
+}

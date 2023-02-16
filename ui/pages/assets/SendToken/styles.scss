@@ -1,0 +1,65 @@
+.send-token-page {
+    padding-bottom: 20px;
+
+    .title {
+        margin: 20px auto;
+        color: var(--color-text-light);
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        background: #F8FBFF;
+        margin: 0 auto;
+        padding: 16px;
+        margin-bottom: 20px;
+        width: 296px;
+        border-radius: 12px;
+
+        .icon {
+            margin-right: 17px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .value {
+            color: var(--color-text-dark);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+
+            .balance {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.confirm-send-token {
+    .info {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--color-text-dark);
+
+        &.total {
+            div {
+                display: flex;
+                flex-direction: column;
+
+                small {
+                    color: var(--color-text-light);
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 0.5px solid var(--color-border-extra-light);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.create-wallet-container {
+    main {
+        padding: 16px;
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            width: 600px;
+            max-width: 100%;
+            margin: 0 auto;
+            height: 10px;
+        }
+
+        .progress,
+        .progress-bar {
+            border-radius: 8px;
+        }
+
+        .progress-bar {
+            background-image: linear-gradient(to right, #ffffff, #dad6fd, #afaffa, #7a8bf8, #006af5);
+        }
+
+        .steps {
+            .title {
+                margin: 20px auto;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use "~styles/breakpoints";
+
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: absolute;
+    min-height: calc(100vh - 74px);
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: var(--color-zwallet) !important;
+    color: white !important;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #006af55c;
+    color: white;
+}
+
+@media screen and (max-width: breakpoints.$break-midpoint) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+}
+
+@media screen and (max-width: breakpoints.$break-small) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}

@@ -1,0 +1,76 @@
+.list-nfts {
+    padding: 10px 10px 0 10px;
+    text-align: left;
+    color: var(--grey700);
+
+    .nft-container {
+
+        .nft-addr {
+            margin-bottom: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0.5rem;
+            padding: 9px 16px;
+            border: 1px solid var(--color-border-extra-light);
+            border-radius: 12px;
+
+            button {
+                font-size: 14px;
+                color: var(--color-text-dark);
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .nft-item {
+                aspect-ratio: 1;
+                width: calc(25% - 10px);
+                max-width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                border-radius: 10px;
+                border: 1px solid var(--color-border-extra-light);
+                margin-bottom: 10px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+                color: var(--color-text-dark);
+                padding: 5px;
+
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+// override bootstrap css:
+.accordion-item {
+    border: none !important;
+}
+
+.accordion-button {
+    background-color: unset !important;
+    border: unset !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+
+    &::after {
+        width: 1rem;
+        height: 1rem;
+        background-size: 1rem;
+    }
+}
+
+.accordion-body {
+    padding: 0;
+}

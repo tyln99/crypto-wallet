@@ -1,0 +1,78 @@
+@use "~styles/breakpoints";
+
+.confirm-phrase-form {
+    .seed-buttons {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        width: 542px;
+        margin: 0 auto;
+
+        .seed-button {
+            width: 100px;
+            padding: 10px 0;
+            color: var(--color-text-light);
+            border: 1px solid var(--color-border-light);
+            margin: 3px;
+            border-radius: 4px;
+            background: none;
+            -webkit-transition: background-color 0.2s ease-out;
+            -moz-transition: background-color 0.2s ease-out;
+            -o-transition: background-color 0.2s ease-out;
+            transition: background-color 0.2s ease-out;
+
+            &.active {
+                background-color: var(--color-bg-light);
+                color: var(--color-text-light) !important;
+            }
+
+            &:hover {
+                background-color: var(--color-zwallet);
+                color: white !important;
+            }
+        }
+    }
+
+    .selected-seeds {
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 542px;
+        height: 152px;
+        border-radius: 8px;
+        border: 1px solid var(--color-border-extra-light);
+        margin: 0 auto;
+
+        .seed-button {
+            width: 100px;
+            padding: 10px 0;
+            color: var(--color-text-light);
+            border: 1px solid var(--color-border-light);
+            margin: 3px;
+            border-radius: 4px;
+            background: none;
+            -webkit-transition: background-color 0.2s ease-out;
+            -moz-transition: background-color 0.2s ease-out;
+            -o-transition: background-color 0.2s ease-out;
+            transition: background-color 0.2s ease-out;
+
+            &:hover {
+                background-color: var(--color-zwallet);
+                color: white !important;
+            }
+        }
+    }
+
+    .group-btn {
+        justify-content: center;
+    }
+
+    .err-msg {
+        width: 555px;
+        margin: 0 auto;
+    }
+}

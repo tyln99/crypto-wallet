@@ -1,0 +1,21 @@
+.privacy-setting-content {
+    .privacy-setting-header h2 {
+        font-size: 18px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    main {
+        .alert {
+            width: 328px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .reveal-btn {
+            width: 328px;
+            margin: 0 auto;
+        }
+    }
+}

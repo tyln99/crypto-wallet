@@ -1,0 +1,48 @@
+.connect-account-page {
+    .title {
+        padding: 20px 0;
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        strong {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--color-text-dark);
+        }
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .account-list {
+        height: calc(100vh - 73px - 89px);
+        overflow-y: auto;
+    }
+
+    .group-btn {
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 0.5px solid var(--color-border-extra-light);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: white;
+
+        button {
+            width: 49%;
+        }
+    }
+}

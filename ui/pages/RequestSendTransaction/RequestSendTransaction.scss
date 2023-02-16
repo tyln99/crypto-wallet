@@ -1,0 +1,187 @@
+.request-send-transaction-page {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        background: #F4F5F6;
+        color: var(--color-text-dark);
+        border-bottom: 0.5px solid var(--color-border-extra-light);
+    }
+
+    .network-info {
+        padding: 10px;
+    }
+
+    .alert {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+    }
+
+    .transaction-form {
+        .balance {
+            padding: 10px;
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            margin-top: 10px;
+            font-weight: bold;
+            background-color: var(--grey040);
+        }
+    }
+
+    color: var(--grey800);
+
+    section {
+        padding: 10px;
+    }
+
+    .action-info {
+        padding: 25px 10px;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--color-text-dark);
+        background: #F8FBFF;
+
+        .action {
+            display: flex;
+            color: var(--color-zwallet);
+            font-weight: 500;
+
+            .text {
+                background: #EBF4FF;
+                border-radius: 24px;
+                padding: 8px 16px;
+                margin-top: 8px;
+            }
+
+            &.contract {
+                color: var(--color-text-dark);
+
+                .address {
+                    color: var(--color-zwallet);
+                    cursor: pointer;
+                }
+
+                .method {}
+            }
+
+        }
+
+        .origin {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .balance {
+            font-size: 15px;
+            margin-top: 10px;
+            color: darkslategrey;
+            font-weight: bold;
+            padding: 10px 20px;
+            width: 151px;
+            background: var(--grey040);
+            border-radius: 100px;
+            text-align: center;
+            border: 1px solid grey;
+        }
+
+        .method-params {
+            overflow: auto;
+
+            p {
+                text-overflow: ellipsis;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .details {
+        padding: 16px 16px 0 16px;
+        height: 50vh;
+
+        h2 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--color-text-dark);
+            margin-bottom: 24px;
+        }
+
+        .transaction-detail {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--color-text-dark);
+
+            .line {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+                font-size: 13px;
+
+                &.total {
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                    }
+
+                    small {
+                        color: var(--color-text-light);
+                    }
+                }
+            }
+        }
+    }
+
+    .group-btn {
+        border-top: 0.5px solid var(--color-border-extra-light);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+
+        button {
+            width: 49%;
+        }
+    }
+
+    .money-direction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        padding: 16px;
+
+        strong {
+            cursor: pointer;
+        }
+    }
+}
+
+.confirm-transaction {
+    .info {
+        font-size: 13px;
+        line-height: 25px;
+        display: flex;
+        justify-content: space-between;
+
+        &.total {
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                line-height: 25px;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--color-zwallet);
+    color: white;
+
+    .logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    .header-setting {
+        display: flex;
+        align-items: center;
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            outline: none;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .dropdown-menu {
+            border: none;
+            border: 1px solid #E9EBED;
+            box-shadow: 0px 2px 6px rgb(20 20 21 / 14%);
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 0;
+        }
+
+
+        .show>.btn-primary.dropdown-toggle {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .show>.btn-primary.setting-btn {
+            border: none;
+            background: none;
+        }
+
+        .network-dropdown {
+            svg {
+                font-size: 10px;
+            }
+
+            .dropdown-item {
+                color: black;
+                padding: 10px 15px;
+                font-size: 14px;
+
+                &:hover {
+                    background-color: rgba(160, 196, 229, 0.4);
+                }
+            }
+
+            .network-info {
+                margin-right: 10px;
+                background-color: unset;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 38px;
+                border: 1px solid rgba(160, 196, 229, 0.4);
+
+                &:hover {
+                    background-color: rgba(160, 196, 229, 0.4);
+                }
+            }
+
+            .add-network-btn {
+                text-align: center;
+                cursor: pointer;
+                font-weight: bold;
+                padding: 5px 0 5px 0;
+            }
+        }
+
+    }
+}

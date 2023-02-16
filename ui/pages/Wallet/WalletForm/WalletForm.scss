@@ -1,0 +1,24 @@
+.wallet-form {
+    width: 100% !important;
+    padding: 10px;
+
+    .form-group {
+
+        &:not([class*="seed-phrases-input"]) {
+            width: 328px;
+        }
+    }
+
+    .btn-group {
+        width: 328px;
+    }
+
+    .seed-phrases-input {
+        .err-msg {
+            margin-top: 4px;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--color-error);
+        }
+    }
+}

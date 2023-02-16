@@ -1,0 +1,58 @@
+@use "~styles/breakpoints";
+
+.settings-page {
+    .setting-header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-zwallet);
+
+        a {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .title {
+            color: white;
+        }
+
+        .left,
+        .right {
+            width: 50px;
+        }
+    }
+
+    .settings-content {
+        margin-left: 200px;
+        padding: 16px;
+    }
+
+    main {
+        position: relative;
+    }
+
+    @media screen and (max-width: breakpoints.$break-midpoint) {
+        .settings-content {
+            margin-left: 0;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--color-text-light);
+        }
+    }
+}

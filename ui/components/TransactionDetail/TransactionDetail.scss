@@ -1,0 +1,84 @@
+.transaction-detail-container {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-text-dark);
+
+    .copy-trans {
+        margin-bottom: 24px;
+
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--color-zwallet);
+            margin-top: 6px;
+            cursor: pointer;
+
+            &.disabled {
+                opacity: .5;
+                cursor: unset;
+            }
+        }
+    }
+
+    .line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .from-to {
+        color: var(--color-text-light);
+        margin-bottom: 6px;
+    }
+
+    .direction {
+        font-weight: 500;
+        margin-bottom: 20px;
+
+        strong {
+            cursor: pointer;
+        }
+    }
+
+    .status--pending {
+        color: var(--grey700);
+    }
+
+    .status--approved,
+    .status--confirmed {
+        color: var(--color-success);
+    }
+
+    .status--failed {
+        color: var(--color-error);
+    }
+
+    .transaction-detail {
+        .transaction-detail-title {
+            font-weight: 500;
+            font-size: 20px;
+            padding: 15px 0 0px 0;
+            border-top: 0.5px solid var(--color-border-extra-light);
+            margin-bottom: 30px;
+
+        }
+
+        .line {
+            padding-bottom: 20px;
+        }
+    }
+
+    .total {
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        small {
+            color: var(--color-text-light);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["ui/*"],
+      "@resources/*": ["ui/resources/*"],
+      "@hooks/*": ["ui/hooks/*"],
+      "@components/*": ["ui/components/*"],
+      "@pages/*": ["ui/pages/*"],
+      "@config/*": ["ui/config/*"],
+      "@common/*": ["ui/common/*"],
+      "@actions/*": ["ui/actions/*"],
+      "@services/*": ["ui/services/*"],
+      "@hocs/*": ["ui/hocs/*"],
+      "@mock/*": ["ui/mock/*"],
+      "@assets/*": ["ui/assets/*"],
+      "@thunks/*": ["ui/thunks/*"],
+      "@providers/*": ["ui/providers/*"],
+      "@app/*": ["app/*"],
+      "@shared/*": ["shared/*"],
+      "@utils/*": ["shared/util/*"],
+      "@store/*": ["ui/store/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
+  

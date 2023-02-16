@@ -1,0 +1,76 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .login-container {
+        background: url(~images/login_bg.png) no-repeat center center fixed;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 570px;
+
+        .title {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--color-zwallet);
+            margin-bottom: 44px;
+
+            .blur {
+                color: #7C9DCA;
+            }
+        }
+
+        .logo {
+            width: 98;
+            height: 98;
+            margin-bottom: 32px;
+        }
+
+        .zForm {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            width: 222px;
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .submit-btn {
+                margin: 0 auto;
+            }
+        }
+
+        .forgot-password-btn {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: var(--color-zwallet);
+            cursor: pointer;
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        button {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--color-text-light);
+        }
+    }
+}
